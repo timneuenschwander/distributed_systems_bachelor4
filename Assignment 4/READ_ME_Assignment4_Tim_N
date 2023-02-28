@@ -1,0 +1,21 @@
+Assignment 4 Tim Neuenschwander
+
+Code for RPI is in the Assignment4.py file.
+
+Comments:
+
+Herewith I want to declare that I worked together with/talked with Alain (for the code in general) and indirectly received help from Martin (for the 12 degree calculation). 
+
+Furthermore, the feedback I have for you is similar to the older ones. The task is cool, you guys are cool and the course is cool, but the effort reflects an 8 credits course at HSG and it makes it difficult to get all the work done next to these assignments. 
+
+Sources:
+https://www.w3schools.com/python/ref_math_radians.asp
+https://stackoverflow.com/questions/8783261/python-math-module
+https://stackoverflow.com/questions/12737740/python-requests-and-persistent-sessions
+https://stackoverflow.com/questions/51788550/parsing-json-nested-dictionary-using-python/51788790
+https://www.programiz.com/python-programming/json
+https://stackoverflow.com/questions/21560433/how-to-write-a-nested-dictionary-to-json
+https://stackoverflow.com/questions/12738031/creating-a-new-function-as-return-in-python-function
+https://stackoverflow.com/questions/14315729/rest-api-design-regarding-delete-method
+https://www.studytonight.com/post/trigonometric-function-in-python
+https://realpython.com/python-requests/#the-get-request

@@ -1,0 +1,83 @@
+Assignment 1 Tim Neuenschwander
+
+1.1
+
+1 pulse with a length of 9 ms followed by a 4.5 ms pause
+
+1.2
+
+All bits of the address and the data fields are inverted. 
+This is a control mechanism that helps the receiver to verify
+the message.
+
+If one takes a look at the output of the ir_timings.py program
+it gets clear that a standard package that is received form the remote
+includes the negation values.
+
+1.3
+
+Standard message = 67.5 ms
+final pulse = 0.56 ms
+67.5 ms + 0.56 ms = 68.6 ms
+
+
+1.4
+
+press 7 => printout
+
+Listening for an IR packet
+Finished receiving standard IR packet
+[1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+[8887, 4524, 569, 568, 582, 573, 576, 575, 574, 573, 579, 571, 581, 573, 577, 573, 581, 573, 577, 1680, 625, 1663, 554, 1678, 578, 1685, 576, 1708, 554, 1680, 580, 1681, 578, 1708, 552, 1681, 581, 1703, 557, 1682, 578, 574, 577, 574, 582, 566, 584, 570, 576, 574, 581, 570, 579, 573, 577, 571, 583, 1704, 555, 1679, 579, 1684, 578, 1682, 579, 1680, 577]
+
+This is A1: [569, 568, 582, 573, 576, 575, 574, 573, 579, 571, 581, 573, 577, 573, 581, 573]
+This is A2: [577, 1680, 625, 1663, 554, 1678, 578, 1685, 576, 1708, 554, 1680, 580, 1681, 578, 1708]
+This is M1: [552, 1681, 581, 1703, 557, 1682, 578, 574, 577, 574, 582, 566, 584, 570, 576, 574]
+This is M2: [581, 570, 579, 573, 577, 571, 583, 1704, 555, 1679, 579, 1684, 578, 1682, 579, 1680]
+
+[568, 573, 575, 573, 571, 573, 573, 573]
+[1680, 1663, 1678, 1685, 1708, 1680, 1681, 1708]
+[1681, 1703, 1682, 574, 574, 566, 570, 574]
+[570, 573, 571, 1704, 1679, 1684, 1682, 1680]
+This is the button you pushed: [1, 1, 1, 0, 0, 0, 0, 0]
+This is the negative of the button you pushed: [0, 0, 0, 1, 1, 1, 1, 1]
+Button number 7
+
+2.1
+
+PWM means pulse width modulation. By changing the time span, during 
+which the signal is high, compared to when its low over a consistent 
+time interval, one is able to communicate intensities (percentages).
+A very fitting example are LED lights. Through adjusting the length of a signal,
+one is able to either dim the light or make it brigther.
+
+2.2
+
+Change Colour:
+Here I implemented a random change machanism for the horizontal arrows.
+
+Dim Colour:
+Here I add or subtract the to/from the the colour components to dim the light.
+
+3
+--> No time left
+
+Sources:
+- https://stackoverflow.com/questions/22842289/generate-n-unique-random-numbers-within-a-range
+- https://tutorials-raspberrypi.com/control-raspberry-pi-robots-via-infrared-remote-control-part-3/
+- https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/
+- https://www.hackster.io/Tisko/rgb-led-change-color-through-python-7fa1c7
+- https://github.com/rpi-ws281x/rpi-ws281x-python/tree/master/library
+- https://docs.python.org/3/
+- Information Slack Plattform
+- Information does on PDF Exercise Description
+
+Feedback:
+I think the Exercise was cool but very hard.
+I spend almost 3 days on it and did not even finish it. Sadly I could not work on it anymore, because I have other priorities on Monday and Tuesday.
+You guys are very supporting and nice and your help is highly appreciated.
+But I think for me it would be great to get more information about the codes or applications we must work with and in general receive a more detailed explanation. Because I understand the theory behind, but I spend too much time understanding/implementing code. 
+
+As an example, you could have demonstrated what the programs (including the different key methods) do in general when pushing a button on the remote (especially the code for exercise 3 was almost impossible to understand for me) and then let us work on a specific case (with the basic knowledge gained).
+
+However, in summary I found it super interesting to work with the RPI and it is great how much effort you guys put into this. Thank you

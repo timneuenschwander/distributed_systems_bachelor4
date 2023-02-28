@@ -1,0 +1,6 @@
+PREFIX td: <https://www.w3.org/2019/wot/td#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX htc: <https://www.w3.org/2019/wot/hypermedia#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX td5: <http://www.unisg/cnds/assignment5/things#>
+SELECT * WHERE {?Thing rdf:type td:Thing.}

@@ -1,0 +1,129 @@
+Assignment 1 Tim Neuenschwander
+
+1.1
+
+LoRa --> Physical Layer --> Physical + Datalink
+
+LoRa describes the communication technology (wireless technology), which requires a very small 
+amount of energy (low powered senders), but enables long distance transmission of small data 
+packages (0.3. kbps to 5.5 kbps). LoRa is always used for the communication betweenLoRa sensors 
+(nodes) and LoRa Gateways(that are connected with the LoRa-Server).
+
+Source: 
+https://www.linemetrics.com/de/lora-und-lorawan-einfach-erklaert/
+https://www.youtube.com/watch?v=6WMzRrmMjQU
+
+LoRaWAN --> MAC Layer + Application Layer --> Transport + Network
+
+LoRaWan is the whole setup are LoRa compatible devices. It is the network structure and 
+communication system thatconnects the individual components.
+
+Source: 
+https://www.linemetrics.com/de/lora-und-lorawan-einfach-erklaert/
+
+LoRa Edge
+
+LoRa Edge (LR1110) is an "ultra-low power platform that integrates a long range LoRa transceiver, 
+multi-constellation scanner and passive Wi-Fi AP MAC address scanner targeting asset management applications".
+Source: 
+https://www.semtech.com/products/wireless-rf/lora-transceivers/lr1110
+
+"The LR1110 solution utilizes Semtech’s LoRa Cloud geolocation capabilities, to significantly reduce power 
+consumption by determining asset location in a Cloud-based solver."
+Source: 
+https://www.semtech.com/products/wireless-rf/lora-transceivers/lr1110
+
+1.2
+
+No. The data that gateways receive from individual end notes are transmitted to the network server,
+ then to the application server and then to the user. Plus there are two decription processes between the
+gateway and the end user.
+
+Process:
+
+An endnote broadcasts its data to every gateway within reaching distance. These gateways then forward the data to 
+the network server, which determines the gateway with the best reception. After that the network server sends the data
+to the application server, which ultimately provides the data to the end user (visualisation of the data). 
+
+Source:
+https://www.cyberark.com/resources/threat-research-blog/lorawan-mqtt-what-to-know-when-securing-your-iot-network
+https://www.youtube.com/watch?v=6WMzRrmMjQU
+Andres' Lecture
+
+1.3
+
+Encryption:
+
+There are two keys associated with the transmitted data. The "Network Session Key" (Message Integrity and MAC commands) 
+and the "Application Session Key" (Payload Encryption and Decryption). Hence a data packet must be encrypted at these two servers,
+in order to be accessible for the end user.
+
+Source:
+https://www.cyberark.com/resources/threat-research-blog/lorawan-mqtt-what-to-know-when-securing-your-iot-network
+https://www.youtube.com/watch?v=6WMzRrmMjQU
+Andres' Lecture
+
+1.4
+
+The spreading factor of the received packets is 7 nd the bandwith is 125 kHz.
+The printed output looks like this: "data_rate: SF7BW125".
+
+The RSSI is the received signal strength indicator. Normally, RSSIs are distributed within the range -30dB to -90dB 
+When looking at the output of mqtt.py the RSSI is always around -90dB.
+
+Sources:
+- Slides from the lectures
+- Conversation with Daniel from our class
+
+1.5
+
+Given the values SF 7 and BW 125kHZ I made the following conclusions:
+- The low SF of 7 indicates a short distance between the sensor and the gateway. The transmission is direct and clear.
+- The high BW of 125kHZ means that the throughput is high and the disturbance or disruption is low. Therefore the 
+distance between the sensor and the gateway is rather small.
+
+Sources:
+- Slides from the lectures
+- Conversation with Daniel from our class
+
+2.1 Code on the "mqtt_lora_Tim_N" file!
+
+Decoded WIFI Packet:
+
+Length of the WIFI packet: 49
+RSSI per WIFI AP: [-82, -52, -57, -69, -67, -81, -91]
+MAC Address per WIFI AP: ['f4dbe6f1dc41', 'b0be7677f700', '2ae829e14346', '7c210e7b7300', '7c210e7b7301', '683b785b9c40', '1c24cd2ee120']
+
+2.2 Code on the "mqtt_lora_Tim_N" file!
+
+Decoded ACC Packet:
+
+Length of the ACC packet (constant): 9
+Move History of the ACC packet (constant): 0
+ACC X: -16
+ACC Y: -80
+ACC Z: 1011
+
+Code on the "mqtt_lora_Tim_N" file!
+
+Sources:
+https://docs.python.org/3/library/struct.html
+https://www.educative.io/edpresso/what-is-the-python-struct-module
+https://www.kite.com/python/answers/how-to-convert-a-hexadecimal-string-to-a-byte-array-in-python
+https://pymotw.com/2/struct/
+https://stackoverflow.com/questions/7084726/how-to-use-c-structure-in-python
+https://www.geeksforgeeks.org/python-list/
+https://learnpython.com/blog/python-array-vs-list/
+https://physics.nyu.edu/pine/pymanual/html/chap3/chap3_arrays.html
+https://www.programiz.com/python-programming/methods/list/index
+https://docs.python.org/3/tutorial/datastructures.html
+
+
+
+
+
+
+
+
+
+

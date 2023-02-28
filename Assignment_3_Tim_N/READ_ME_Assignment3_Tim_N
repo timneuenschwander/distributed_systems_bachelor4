@@ -1,0 +1,58 @@
+Assignment 3 Tim Neuenschwander
+
+1:--> programm
+HTML Structure:
+<html>
+                                <head><title>Hypermedia Environment</title></head>
+                                <body>
+                                    <p>hon</p>
+                                    <p>though</p>
+                                    <p>cable</p>
+                                    <a href="d4658c1473976fb7">d4658c1473976fb7</a>
+                                    <a href="aad50fbae1b8b0b8">aad50fbae1b8b0b8</a>
+                                    <a href="fb9262356e2a8e37">fb9262356e2a8e37</a>
+                                </body>
+                            </html>
+
+2:--> programm
+
+3:--> programm
+Report whether the resulting, flipped, index is smaller or larger than the original index! What does this depend on?
+
+They are not the same size. This is due to the fact that the normal index shows all words for one link, while the flipped index shows shows all links for one word. Since it happens more often that different words have the same link (often 3) than the same word has different links, the flipped index is larger than the normal index.
+
+Benchmark both search programs that you implemented in this task, e.g. using the time library. On what factors does their relative performance depend, i.e., which of the two programs outperforms the other in which situation?
+
+>>> %Run searcher_flipped.py
+Enter a word equipped
+Word found on following pages: '/2d5d1e336688ea78', '/10c3b7feae994075'
+Runtime of the program is 0.0003731250762939453
+>>> %Run searcher_simple.py
+Enter a word equipped
+Word found on following pages: '/2d5d1e336688ea78', '/10c3b7feae994075'
+Runtime of the program is 0.00038886070251464844
+
+However, the runtime of searcher flipped is lower. I think this is due to the assembly or structure of the information in the flipped index. It is better/faster accessible, since there is only one entry for one word.
+
+4:not done
+
+Comments:
+
+Again the exercise was interesting and your help was great. But I spent 3 days to solve 3/4 of the assignment. For me (with my informatics skills) its just to much to handle (the whole assignment) with all the other Uni courses. 
+
+Sources:
+https://www.geeksforgeeks.org/writing-csv-files-in-python/
+https://stackoverflow.com/questions/44778/how-would-you-make-a-comma-separated-string-from-a-list-of-strings
+https://stackoverflow.com/questions/4481724/convert-a-list-of-characters-into-a-string
+https://stackoverflow.com/questions/18866339/how-to-remove-symbols-from-list-elements-in-python
+https://stackoverflow.com/questions/56590706/how-to-extract-words-from-a-list-of-lists-and-filter-words-by-length
+https://pythonspot.com/files-spreadsheets-csv/
+https://www.programiz.com/python-programming/writing-csv-files
+https://stackoverflow.com/questions/46155800/converting-html-tag-to-string
+https://stackoverflow.com/questions/25443717/convert-selected-html-tags-into-string
+https://stackoverflow.com/questions/857653/get-a-list-of-urls-from-a-site
+https://stackoverflow.com/questions/5404665/accessing-elements-of-python-dictionary-by-index
+https://realpython.com/iterate-through-dictionary-python/
+https://en.wikipedia.org/wiki/Software_design#Design_considerations
+https://docs.python.org/3/library/csv.html
+https://www.studytonight.com/post/calculate-time-taken-by-a-program-to-execute-in-python

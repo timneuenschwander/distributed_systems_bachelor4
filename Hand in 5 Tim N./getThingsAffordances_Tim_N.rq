@@ -1,0 +1,14 @@
+PREFIX td: <https://www.w3.org/2019/wot/td#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX htc: <https://www.w3.org/2019/wot/hypermedia#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX td5: <http://www.unisg/cnds/assignment5/things#>
+SELECT * WHERE {
+?Thing rdf:type td:Thing.
+?Thing dc:title ?title. 
+?Thing td:hasPropertyAffordance ?PropertyAffordance.
+?PropertyAffordance td:hasForm ?Form1.
+?Form1 htc:hasTarget ?hasTarget1.
+?ActionAffordance td:hasForm ?Form2.
+?Form2 htc:hasTarget ?hasTarget2.
+}
